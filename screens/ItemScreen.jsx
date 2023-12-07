@@ -11,6 +11,7 @@ import {
 } from "react-native";
 import { Entypo } from "@expo/vector-icons";
 import MasanoryLayout from "./MasanoryLayout";
+import SearchInput from "./SearchInput";
 const ItemScreen = ({ route }) => {
   //default and our param
   const id = route?.params?.param;
@@ -54,6 +55,12 @@ const ItemScreen = ({ route }) => {
                     />
                   </TouchableOpacity>
                 </View>
+
+                
+
+
+
+
                 {/* installing this  masnary layout */}
                 <ScrollView className="w-full h-full px-4">
                   {

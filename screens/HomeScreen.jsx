@@ -19,7 +19,7 @@ const HomeScreen = () => {
   const [errorText, setErrorText] = useState("");
 
   const filterData = (text) => {
-    if (text.trim() === "") {
+    if (text.trim() === " ") {
       setFilteredCategories(categories);
       setErrorText("");
     } else {

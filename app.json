@@ -1,10 +1,11 @@
 {
   "expo": {
-    "name": "my-app",
+    "name": "Pix Share",
     "slug": "my-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
+    "jsEngine": "hermes",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
@@ -16,13 +17,18 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.mayur03.myapp" 
+      "bundleIdentifier": "com.mayur03.myapp",
+      "jsEngine": "jsc",
+      "runtimeVersion": {
+        "policy": "appVersion"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -31,6 +37,9 @@
       "eas": {
         "projectId": "71cc7851-8dab-48f2-8a08-b557eda9b8d7"
       }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/71cc7851-8dab-48f2-8a08-b557eda9b8d7"
     }
   }
 }

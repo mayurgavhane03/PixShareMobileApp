@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 import {View, Text, StyleSheet, TouchableOpacity, Image} from 'react-native';
 
 const LoginScreen = ({promptAsync}) => {
@@ -47,4 +47,4 @@ const styles = StyleSheet.create({
  },
 });
 
-export default LoginScreen;
+export default LoginScreen; */

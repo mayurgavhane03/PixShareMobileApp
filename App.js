@@ -9,36 +9,13 @@ import {
   ItemScreen,
   LoginScreen,
 } from "./screens";
-import FlashMessage from "react-native-flash-message";
-import * as Google from "expo-auth-session/providers/google";
-import * as WebBrowser from "expo-web-browser";
-import { GoogleAuthProvider, signInWithCredential } from "firebase/auth";
-import { auth } from "./firebase";
+
 import { useEffect, useState } from "react";
 
 const App = () => {
   const Stack = createNativeStackNavigator();
 
   const [userInfo, setUserInfo] = useState(null);
-
-  // Prompt to start sign-in functionality
-  const [request, response, promptAsync] = Google.useAuthRequest({
-    iosClientId: 'your_ios_client_id',
-    androidClientId: 'your_android_client_id',
-  });
-
-  useEffect(() => {
-    WebBrowser.maybeCompleteAuthSession();
-
-    if (response?.type === "success") {
-      const { id_token } = response.params;
-      const credential = GoogleAuthProvider.credential(id_token);
-
-      // Handling signInWithCredential as an async operation
-      signInWithCredential(auth, credential)
-        console.log("called")
-    }
-  }, [response]);
 
   return (
     <NavigationContainer>
